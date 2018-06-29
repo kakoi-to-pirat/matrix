@@ -1,9 +1,4 @@
 <?php
-/**
- * User: Pirate
- * Date: 29.06.2018
- * Time: 16:01
- */
 
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/config.php';

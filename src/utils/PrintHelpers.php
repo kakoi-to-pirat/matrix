@@ -1,12 +1,6 @@
 <?php
-/**
- * User: Pirate
- * Date: 30.06.2018
- * Time: 0:39
- */
 
 namespace Matrix\Src\Utils;
-
 
 class PrintHelpers
 {

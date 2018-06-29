@@ -1,13 +1,6 @@
 <?php
-/**
- * User: Pirate
- * Date: 29.06.2018
- * Time: 16:11
- * Class MatrixProcedure
- */
 
 namespace Matrix\Src;
-
 
 class MatrixServiceProcedure
 {

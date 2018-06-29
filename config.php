@@ -1,8 +1,9 @@
 <?php
 /**
- * User: Pirate
- * Date: 29.06.2018
- * Time: 16:48
+ * @property int $sizeOfMatrix
+ * @property int $minValue
+ * @property int $maxValue
+ * @property int $countOfMatrices
  */
 class Config
 {

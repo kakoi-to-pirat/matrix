@@ -1,7 +1,18 @@
 {
+  "name": "pirate/matrix",
+  "description": "Generation of 3x3 matrices. Generate random unique numbers to fill the array. Work with arrays.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "kakoi-to-pirat",
+      "email": "kakoi-to.pirat@yandex.ru"
+    }
+  ],
+  "require": {},
   "autoload": {
     "psr-4": {
-      "Matrix\\Src\\":"src/"
+      "Matrix\\Src\\": "src/"
     }
   }
 }
