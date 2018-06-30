@@ -19,7 +19,7 @@ class PrintHelpers
     {
         foreach ($matrices as $keyOfMatrix => $matrix) {
 
-            echo $keyOfMatrix + 1 . '-я Матрица' . PHP_EOL;
+            echo $keyOfMatrix . '-я Матрица' . PHP_EOL;
 
             foreach ($matrix as $rowOfMatrix) {
                 echo implode(', ', $rowOfMatrix) . PHP_EOL;

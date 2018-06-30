@@ -38,8 +38,8 @@ class MatrixServiceProcedure
     {
         $matrices = [];
 
-        for ($i = 0; $i < $this->countOfMatrices; $i++) {
-            $matrices[] = $this->createMatix();
+        for ($i = 1; $i <= $this->countOfMatrices; $i++) {
+            $matrices[$i] = $this->createMatix();
         }
 
         return $matrices;
