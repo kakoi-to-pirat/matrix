@@ -17,3 +17,8 @@ docker-compose up
 Проект будет доступен по адресу: 
 
 http://matrix.localhost
+
+Запуск в консоли:
+```
+php index.php
+```
