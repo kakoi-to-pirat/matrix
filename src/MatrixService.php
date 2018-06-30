@@ -17,7 +17,7 @@ class MatrixService
     {
         if ($config->minValue >= $config->maxValue || $config->sizeOfMatrix ** 2 > $config->maxValue) {
 
-            throw new InvalidArgumentException('Недопустимые значения');
+            throw new \InvalidArgumentException('недопустимые значения');
         }
 
         $this->sizeOfMatrix = $config->sizeOfMatrix;
@@ -45,35 +45,5 @@ class MatrixService
         }
 
         return $matrices;
-    }
-
-
-    /**
-     * @param array $matrices
-     * @return array
-     */
-    public function getSumsOfValuesInRowsMatrices(array $matrices): array
-    {
-        $result = [];
-
-        foreach ($matrices as $matrix) {
-            foreach ($matrix as $row) {
-                $result[] = array_sum($row);
-            }
-        }
-
-        return $result;
-    }
-
-    /**
-     * Вернуть массив уникальных сумм
-     * @param array $values
-     * @return array
-     */
-    public function getUniqueValues(array $values): array
-    {
-        return array_keys(array_filter(array_count_values($values), function ($item) {
-            return $item === 1;
-        }));
     }
 }

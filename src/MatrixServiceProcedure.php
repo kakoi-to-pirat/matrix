@@ -2,6 +2,10 @@
 
 namespace Matrix\Src;
 
+/**
+ * В данном классе собраны функции для генерации матриц,
+ * реализованные с минимальным функционалом, встроенного в язык php
+ */
 class MatrixServiceProcedure
 {
     private $sizeOfMatrix;
@@ -17,7 +21,7 @@ class MatrixServiceProcedure
     {
         if ($config->minValue >= $config->maxValue || $config->sizeOfMatrix ** 2 > $config->maxValue) {
 
-            throw new InvalidArgumentException('Недопустимые значения');
+            throw new \InvalidArgumentException('недопустимые значения');
         }
 
         $this->sizeOfMatrix = $config->sizeOfMatrix;
@@ -83,63 +87,10 @@ class MatrixServiceProcedure
     {
         $randomValue = random_int($this->minValue, $this->maxValue);
 
-        while (in_array($randomValue, $array, true)) {
+        while (\in_array($randomValue, $array, true)) {
             $randomValue = random_int($this->minValue, $this->maxValue);
         }
 
         return $randomValue;
     }
-
-    /**
-     * Вернуть массив сумм элементов в каждой строке каждой матрицы
-     * @param array $matrices
-     * @return array
-     */
-    public function getSumsOfValuesInRowsMatrices(array $matrices): array
-    {
-        $sums = [];
-        foreach ($matrices as $matrix) {
-            foreach ($matrix as $rowOfMatrix) {
-                $sums[] = array_sum($rowOfMatrix);
-            }
-        }
-
-        return $sums;
-    }
-
-    /**
-     * Вернуть массив уникальных значений
-     * @param array $array
-     * @return array
-     */
-    public function getUniqueValues(array $array): array
-    {
-        $uniqueValues = [];
-        $valuesCountValues = array_count_values($array);
-
-        foreach ($valuesCountValues as $value => $count) {
-            if ($count === 1) {
-                $uniqueValues[] = $value;
-            }
-        }
-
-        return $uniqueValues;
-    }
-
-    /**
-     * Генерация случайного числа для добавления в массив с помощью рекурсии (другой варинт решения)
-     * @param array $array
-     * @return int
-     */
-    private function generateRecursionRandomValueForArray(array $array): int
-    {
-        $randomValue = random_int($this->minValue, $this->maxValue);
-
-        if (!in_array($randomValue, $array, true)) {
-            return $randomValue;
-        }
-
-        return $this->generateRandomValueForArray($array);
-    }
-
 }
