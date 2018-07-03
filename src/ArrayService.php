@@ -10,15 +10,15 @@ class ArrayService
      */
     public function getSumsOfValuesInRowsArray(array $arrays): array
     {
-        $sums = [];
+        $arraySums = [];
         
         foreach ($arrays as $array) {
-            $sums = array_merge($sums, array_map(function ($item) {
+            $arraySums = array_merge($arraySums, array_map(function ($item) {
                 return array_sum($item);
             }, $array));
         }
 
-        return $sums;
+        return $arraySums;
     }
 
     /**
