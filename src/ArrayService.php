@@ -15,7 +15,7 @@ class ArrayService
         foreach ($arrays as $array) {
             $sums = array_merge($sums, array_map(function ($item) {
                 return array_sum($item);
-            },($array)));
+            }, $array));
         }
 
         return $sums;
