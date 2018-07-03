@@ -11,11 +11,11 @@ class ArrayService
     public function getSumsOfValuesInRowsArray(array $arrays): array
     {
         $sums = [];
-
+        
         foreach ($arrays as $array) {
-            foreach ($array as $row) {
-                $sums[] = array_sum($row);
-            }
+            $sums = array_merge($sums, array_map(function ($item) {
+                return array_sum($item);
+            },($array)));
         }
 
         return $sums;
