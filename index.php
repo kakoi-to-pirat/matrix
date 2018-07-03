@@ -27,15 +27,15 @@ $sums = $arrayService->getSumsOfValuesInRowsArray($matrices);
 $uniqueSums = $arrayService->getUniqueValues($sums);
 
 echo '<pre>';
-echo 'Матрицы:' . PHP_EOL;
+echo 'Matrices:' . PHP_EOL;
 $printHelpers->printMatrices($matrices);
 
 echo PHP_EOL;
-echo 'Список сумм значений в каждой строке каждой матрицы:' . PHP_EOL;
+echo 'List of sums of values in each row of each matrix:' . PHP_EOL;
 $printHelpers->printArray($sums);
 
 echo PHP_EOL;
-echo 'Уникальные суммы:' . PHP_EOL;
+echo 'Unique amount:' . PHP_EOL;
 $printHelpers->printArray($uniqueSums);
 
 echo '</pre>';
