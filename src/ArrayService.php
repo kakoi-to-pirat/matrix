@@ -12,7 +12,7 @@ class ArrayService
     {
         return array_map(function ($item) {
             return array_sum($item);
-        },array_merge(...$arrays));
+        }, array_merge(...$arrays));
     }
 
     /**
